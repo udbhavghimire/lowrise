@@ -15,7 +15,7 @@ const montserrat = Montserrat({ subsets: ["cyrillic"] });
 
 export const metadata = {
   alternates: {
-    canonical: `https://condomonk.ca/`,
+    canonical: `https://lowrise.ca/`,
   },
   title: "Pre Construction Homes for Sale in Canada",
   description:

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     ...parent,
     alternates: {
-      canonical: `https://condomonk.ca/${params.city}`,
+      canonical: `https://lowrise.ca/${params.city}`,
     },
     title:
       "Top " +
