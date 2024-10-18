@@ -388,7 +388,23 @@ export default async function Home(props) {
                   </div>
                 </Link>
               </div>
-
+              <div className="col">
+                <Link className="d-block properti_city" href={"/calgary"}>
+                  <div className="thumb">
+                    <img
+                      src="/cities/calgary.jpeg"
+                      alt="calgary"
+                      className="img-fluid lazy"
+                    />
+                  </div>
+                  <div className="overlay">
+                    <div className="details">
+                      <h4>Calgary</h4>
+                      <p>Explore pre constructions projects in Calgary</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
               <div className="col">
                 <Link className="d-block properti_city" href={"/mississauga"}>
                   <div className="thumb">
