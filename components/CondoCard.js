@@ -25,8 +25,8 @@ export default function CondoCard(props) {
 
   return (
     <>
-      <div className="card border-0 shadow-lg rounded-mine my-3 my-md-0 condocard bigg ">
-        <div className="position-relative is-loading">
+      <div className="card border-0 shadow-lg rounded-3xl my-3 my-md-0 condocard bigg bg-white">
+        <div className="relative p-2">
           <Link
             href={`/${props.city.slug}/${props.slug}`}
             className="mylinkk"
@@ -36,58 +36,48 @@ export default function CondoCard(props) {
               <img
                 loading="lazy"
                 src={`https://api.condomonk.ca${props.image.image}`}
-                layout="responsive"
-                className="img-fluid condocard-img-top"
+                className="h-64 w-full object-cover rounded-xl"
                 alt={`${props.project_name} located at ${props.project_address} image`}
-                fetchPriority="high"
               />
             ) : (
               <img
                 loading="lazy"
                 src="/noimage.webp"
-                layout="responsive"
-                className="img-fluid condocard-img-top"
+                className="h-64 w-full object-cover rounded-xl"
                 alt={`no image available for ${props.project_name}`}
-                fetchPriority="high"
               />
             )}
           </Link>
-          {props.co_op_available && (
-            <span className="shadow-lg p-1 px-2 abs2">Co-op Available</span>
-          )}
-          <span className="d-flex">
-            <span className="shadow-lg p-1 ms-2 abs1">{props.status}</span>
-            <span className="shadow-lg p-1 mx-2 abs3">
-              {props.project_type}
-            </span>
-          </span>
-
-          <span className="px-2 abs2">
-            {props.no + 1 ? props.no + 1 + " " : " "}
+          <span className="absolute left-4 top-5 rounded-full bg-orange-500 px-2 py-1 text-white text-sm">
+            {props.status}
           </span>
         </div>
 
-        <Link
-          href={`/${props.city.slug}/${props.slug}`}
-          className="card-body  text-decoration-none   shadow-lgg rounded-mine"
-          target="_blank"
-        >
-          <div className="card-content  pt-2">
-            <h3 className="mb-1 cardd-title text-dark font-family2">
-              {props.project_name}
-            </h3>
-            <h4 className="mb-1 brand-color cardd-price">
-              {checkPricing(props.price_starting_from)}
-            </h4>
-            <p className="mb-1 cardd-subtitle cardd-subtitle-sm">
-              By {props.developer.name}
-            </p>
-            <p className="mb-1 cardd-subtitle ">{props.project_address}</p>
-            <p className="mb-1 cardd-subtitle text-secondary">
-              Approx completion: {props.occupancy}
-            </p>
+        <div className="px-3 py-2">
+          <div className="mb-1 flex">
+            <i className="bi bi-geo-alt-fill text-orange-500 mr-2"></i>
+            <span className="text-sm">{props.project_address}</span>
           </div>
-        </Link>
+
+          <h2 className="mb-1 text-2xl font-bold text-gray-900">
+            {props.project_name}
+          </h2>
+
+          <div className="mb-1 flex items-center text-gray-500 text-sm">
+            <span>By {props.developer.name}</span>
+          </div>
+          <div className="mb-1 flex items-center text-gray-500 text-sm">
+            <span>Aprox Completion: {props.occupancy}</span>
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div>
+              <span className="text-lg font-bold text-orange-500">
+                {checkPricing(props.price_starting_from)}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

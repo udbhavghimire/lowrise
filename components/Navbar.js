@@ -50,7 +50,7 @@ const Navbar = ({ cities, dropdown_cities, transparent }) => {
               className="logo d-flex justify-content-center align-items-center pe-1 font-family2"
             >
               <span>
-                Lowrise
+                AlbertaHomes
                 <span className="brand-color">.</span>
               </span>
             </Link>
@@ -95,7 +95,7 @@ const Navbar = ({ cities, dropdown_cities, transparent }) => {
                   aria-labelledby="dropdownId"
                 >
                   <div className="container">
-                    <div className="row row-cols-md-3 row-cols-3">
+                    <div className="row row-cols-md-4 row-cols-2">
                       {cities &&
                         cities.map((city) => (
                           <div className="col" key={city.id}>
@@ -116,11 +116,7 @@ const Navbar = ({ cities, dropdown_cities, transparent }) => {
                   Pre Construction Homes
                 </Link>
               </li>
-              <li className="nav-item rounded-2  mx-1">
-                <Link className="nav-link" href="/top-10-gta-projects">
-                  Top 10 <span className="fw-medium">GTA</span> Projects
-                </Link>
-              </li>
+
               <li className="nav-item">
                 <Link className="nav-link" href="/blogs">
                   Blogs

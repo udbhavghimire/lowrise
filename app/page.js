@@ -296,53 +296,24 @@ export default async function Home(props) {
         </div>
       </div> */}
 
-      <div className="pt-5 " id="top10gta">
-        <div className="container pt-5 ">
-          <div className="d-flex flex-column align-items-center justify-content-center">
-            <h2 className="fw-mine fs-big ">
-              <span className="link-black font-family2">Featured Project</span>
-            </h2>
-            <p className="fs-5  text-center">
-              Explore Top 10 Pre Construction Project for sale in GTA
-            </p>
-          </div>
-
-          <div className="">
-            <div className="row row-cols-1 row-cols-md-2 my-md-2 my-3 gy-3 g-4">
-              {featured.results &&
-                featured.results.slice(0, 8).map((item) => (
-                  <div className="col" key={item.id}>
-                    <script
-                      key={item.slug}
-                      type="application/ld+json"
-                      dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(PreconSchema(item)),
-                      }}
-                    />
-                    <FeaturedCard {...item} />
-                  </div>
-                ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="pt-5 ">
         <div className="container pt-5 " id="projects">
-          <div className="d-flex align-items-center justify-content-center">
+          {/* <div className="d-flex align-items-center justify-content-center">
             <h2 className="fw-mine ccent-line fs-big ">
               <Link href={"/calgary"} className="link-black font-family2">
                 Calgary
               </Link>
             </h2>
-          </div>
-          <div className="d-flex flex-column justify-content-center flex-column align-items-center mb-lg-5 mb-2">
-            <p className="fs-5 mb-0 text-center">
+          </div> */}
+          <div className="d-flex mb-lg-5 mb-2">
+            <p className="text-4xl fw-bold mb-0 ">
               Explore 20+ pre construction homes for sale in Calgary
             </p>
-            <Link href={"/calgary"} className="mt-1 text-mine text-primary">
-              More communities in Calgary{" "}
-              <i className="bi bi-arrow-right-short"></i>
+            <Link
+              href={"/calgary"}
+              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+            >
+              Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
           <div className="row row-cols-1 row-cols-md-4 gy-md-5 gx-3">
@@ -361,10 +332,10 @@ export default async function Home(props) {
               ))}
           </div>
           <div className="py-5 my-2"></div>
-          <h2 className="fw-mine text-center mb-5 accent-line fs-1 font-family2">
+          <h2 className="fw-mine text-center mb-2 accent-line fs-1 font-family2">
             Explore New Pre Construction Homes In Ontario & Alberta
           </h2>
-          <div className="container">
+          {/* <div className="container">
             <div className="row row-cols-md-5 row-cols-2">
               <div className="col">
                 <Link className="d-block properti_city" href={"/toronto"}>
@@ -452,22 +423,97 @@ export default async function Home(props) {
                 </Link>
               </div>
             </div>
+          </div> */}
+          <div className="container py-5">
+            <div className="row row-cols-md-5 g-3">
+              <div className="col">
+                {" "}
+                <div className="city-card">
+                  <img
+                    src="/cities/brampton.jpg"
+                    alt="New York"
+                    className="img-fluid city-card"
+                  />
+                  <div className="city-card-content">
+                    <small>50 Properties</small>
+                    <h5>Brampton</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col">
+                {" "}
+                <div className="city-card">
+                  <img
+                    src="/cities/calgary.jpeg"
+                    alt="Chicago"
+                    className="img-fluid city-card"
+                  />
+                  <div className="city-card-content">
+                    <small>50 Properties</small>
+                    <h5>Calgary</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col">
+                {" "}
+                <div className="city-card">
+                  <img
+                    src="/cities/etobicoke.jpg"
+                    alt="Los Angeles"
+                    className="img-fluid city-card"
+                  />
+                  <div className="city-card-content">
+                    <small>50 Property</small>
+                    <h5>Etobicoke</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col">
+                {" "}
+                <div className="city-card">
+                  <img
+                    src="/cities/mississauga.jpg"
+                    alt="San Diego"
+                    className="img-fluid city-card"
+                  />
+                  <div className="city-card-content">
+                    <small>50 Properties</small>
+                    <h5>Mississauga</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col">
+                {" "}
+                <div className="city-card">
+                  <img
+                    src="/cities/toronto.jpg"
+                    alt="Florida"
+                    className="img-fluid city-card"
+                  />
+                  <div className="city-card-content">
+                    <small>50 Properties</small>
+                    <h5>Toronto</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="py-5 my-2"></div>
-          <div className="d-flex align-items-center justify-content-center ">
-            <h2 className="fw-mine ccent-line fs-big">
-              <Link href={"/mississauga"} className="link-black font-family2">
-                Mississauga
-              </Link>
-            </h2>
-          </div>
-          <div className="d-flex flex-column justify-content-center flex-column align-items-center mb-5">
-            <p className="fs-5 mb-0 text-center">
-              Explore 30+ pre construction homes for sale in Mississauga
+          <div className="py-3 my-2"></div>
+
+          <div className="d-flex mb-lg-5 mb-2">
+            <p className="text-4xl fw-bold mb-0 ">
+              Explore 50+ pre construction homes for sale in Mississauga
             </p>
-            <Link href={"/mississauga"} className="mt-1 text-mine text-primary">
-              More developments in Mississauga{" "}
-              <i className="bi bi-arrow-right-short"></i>
+            <Link
+              href={"/mississauga"}
+              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+            >
+              Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
           <div className="row row-cols-1 row-cols-md-4 gy-md-5 gy-3 gx-3">
@@ -487,20 +533,16 @@ export default async function Home(props) {
           </div>
 
           <div className="py-5 my-2"></div>
-          <div className="d-flex align-items-center justify-content-center ">
-            <h2 className="fw-mine ccent-line fs-big ">
-              <Link href={"/edmonton"} className="link-black font-family2">
-                Edmonton
-              </Link>
-            </h2>
-          </div>
-          <div className="d-flex flex-column justify-content-center flex-column align-items-center mb-5">
-            <p className="fs-5 mb-0 text-center">
+
+          <div className="d-flex mb-lg-5 mb-2">
+            <p className="text-4xl fw-bold mb-0 ">
               Explore 30+ pre construction homes for sale in Edmonton
             </p>
-            <Link href={"/edmonton"} className="mt-1 text-mine text-primary">
-              More developments in Edmonton{" "}
-              <i className="bi bi-arrow-right-short"></i>
+            <Link
+              href={"/edmonton"}
+              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+            >
+              Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
           <div className="row row-cols-1 row-cols-md-4 gy-md-5 gy-3 gx-3">
@@ -519,38 +561,6 @@ export default async function Home(props) {
               ))}
           </div>
 
-          <div className="py-5 my-2"></div>
-          <div className="d-flex align-items-center justify-content-center ">
-            <h2 className="fw-mine ccent-line fs-big ">
-              <Link href={"/cambridge"} className="link-black font-family2">
-                Cambridge
-              </Link>
-            </h2>
-          </div>
-          <div className="d-flex flex-column justify-content-center flex-column align-items-center mb-5">
-            <p className="fs-5 mb-0 text-center">
-              Explore 30+ pre construction homes for sale in cambridge
-            </p>
-            <Link href={"/cambridge"} className="mt-1 text-mine text-primary">
-              More developments in cambridge{" "}
-              <i className="bi bi-arrow-right-short"></i>
-            </Link>
-          </div>
-          <div className="row row-cols-1 row-cols-md-4 gy-md-5 gy-3 gx-3">
-            {cambridge_data.preconstructions &&
-              cambridge_data.preconstructions.slice(0, 8).map((item) => (
-                <div className="col" key={item.id}>
-                  <script
-                    key={item.slug}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                      __html: JSON.stringify(PreconSchema(item)),
-                    }}
-                  />
-                  <CondoCard {...item} />
-                </div>
-              ))}
-          </div>
           {/* <div className="py-5 mt-md-5 mt-0">
             <div className="text-center py-5 my-5 overlay-container">
               <img
