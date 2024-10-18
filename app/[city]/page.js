@@ -117,7 +117,7 @@ export default async function Home({ params }) {
             </div>
           </div>
           <div className="mt-md-5 mt-0"></div>
-          <div className="row row-cols-1 row-cols-md-4  gy-4 gx-3 gx-lg-3 ">
+          <div className="row row-cols-2 row-cols-md-4  gy-4 gx-3 gx-lg-3 ">
             {data.preconstructions &&
               filteredprojects("Selling").map((item, no) => (
                 <div className="col" key={item.id}>

@@ -36,43 +36,45 @@ export default function CondoCard(props) {
               <img
                 loading="lazy"
                 src={`https://api.condomonk.ca${props.image.image}`}
-                className="h-64 w-full object-cover rounded-xl"
+                className="h-48 md:h-64 w-full object-cover rounded-xl"
                 alt={`${props.project_name} located at ${props.project_address} image`}
               />
             ) : (
               <img
                 loading="lazy"
                 src="/noimage.webp"
-                className="h-64 w-full object-cover rounded-xl"
+                className="h-48 md:h-64 w-full object-cover rounded-xl"
                 alt={`no image available for ${props.project_name}`}
               />
             )}
           </Link>
-          <span className="absolute left-4 top-5 rounded-full bg-orange-500 px-2 py-1 text-white text-sm">
+          <span className="absolute left-4 top-5 rounded-full bg-orange-500 px-2 py-1 text-white text-xxs md:text-sm">
             {props.status}
           </span>
         </div>
 
         <div className="px-3 py-2">
           <div className="mb-1 flex">
-            <i className="bi bi-geo-alt-fill text-orange-500 mr-2"></i>
-            <span className="text-sm">{props.project_address}</span>
+            <i className="bi bi-geo-alt-fill text-orange-500 mr-2 text-xs/[10px] md:text-sm leading-4"></i>
+            <span className="text-xs/[10px] md:text-sm leading-4">
+              {props.project_address}
+            </span>
           </div>
 
-          <h2 className="mb-1 text-2xl font-bold text-gray-900">
+          <h2 className="mb-1 text-base md:text-2xl font-bold text-gray-900">
             {props.project_name}
           </h2>
 
-          <div className="mb-1 flex items-center text-gray-500 text-sm">
+          <div className="mb-1 flex items-center text-gray-500 text-xs md:text-sm">
             <span>By {props.developer.name}</span>
           </div>
-          <div className="mb-1 flex items-center text-gray-500 text-sm">
+          <div className="mb-1 flex items-center text-gray-500 text-xs md:text-sm">
             <span>Aprox Completion: {props.occupancy}</span>
           </div>
 
           <div className="flex items-center justify-between">
             <div>
-              <span className="text-lg font-bold text-orange-500">
+              <span className="text-lg text-sm md:text-lg font-bold text-orange-500">
                 {checkPricing(props.price_starting_from)}
               </span>
             </div>

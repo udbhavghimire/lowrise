@@ -86,7 +86,7 @@ export default async function Home(props) {
       <div className="bgggg pb-5">
         <div className="container pt-md-5 pt-0">
           <div className="row row-cols-md-2 row-cols-1 gx-5 ">
-            <div className="col pt-md-5 pt-0 order-2 order-md-1 pt-5 pt-md-0">
+            <div className="col pt-md-5 pt-0 ">
               <h1 className=" ">
                 <span className="letter-spacing fs-small d-block pb-3 ">
                   TOP DESTINATION FOR
@@ -117,7 +117,7 @@ export default async function Home(props) {
                 </div>
               </div>
             </div>
-            <div className="col  order-1 order-md-2">
+            <div className="col pt-3 pt-md-0">
               <div className="row ">
                 <div className="col-12 image-herotop">
                   <img src="hero1.jpg" alt="Image 1" class="img-fluid" />
@@ -306,17 +306,17 @@ export default async function Home(props) {
             </h2>
           </div> */}
           <div className="d-flex mb-lg-5 mb-2">
-            <p className="text-4xl fw-bold mb-0 ">
+            <p className="text-xl md:text-4xl fw-bold mb-0 ">
               Explore 20+ pre construction homes for sale in Calgary
             </p>
             <Link
               href={"/calgary"}
-              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+              className="mt-1 fw-bold text-sm md:text-xl ml-auto pl-2 md:pl-0 text-orange-500"
             >
               Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
-          <div className="row row-cols-1 row-cols-md-4 gy-md-5 gx-3">
+          <div className="row row-cols-2 row-cols-md-4 gy-md-5  gx-3">
             {data.preconstructions &&
               data.preconstructions.slice(0, 8).map((item) => (
                 <div className="col" key={item.id}>
@@ -332,10 +332,10 @@ export default async function Home(props) {
               ))}
           </div>
           <div className="py-5 my-2"></div>
-          <h2 className="fw-mine text-center mb-2 accent-line fs-1 font-family2">
+          <h2 className="fw-mine text-center mb-2 accent-line text-xl md:text-4xl font-family2">
             Explore New Pre Construction Homes In Ontario & Alberta
           </h2>
-          {/* <div className="container">
+          <div className="container">
             <div className="row row-cols-md-5 row-cols-2">
               <div className="col">
                 <Link className="d-block properti_city" href={"/toronto"}>
@@ -388,23 +388,7 @@ export default async function Home(props) {
                   </div>
                 </Link>
               </div>
-              <div className="col">
-                <Link className="d-block properti_city" href={"/calgary"}>
-                  <div className="thumb">
-                    <img
-                      src="/cities/calgary.jpeg"
-                      alt="calgary"
-                      className="img-fluid lazy"
-                    />
-                  </div>
-                  <div className="overlay">
-                    <div className="details">
-                      <h4>Calgary</h4>
-                      <p>Explore pre constructions projects in Calgary</p>
-                    </div>
-                  </div>
-                </Link>
-              </div>
+
               <div className="col">
                 <Link className="d-block properti_city" href={"/mississauga"}>
                   <div className="thumb">
@@ -423,100 +407,23 @@ export default async function Home(props) {
                 </Link>
               </div>
             </div>
-          </div> */}
-          <div className="container py-5">
-            <div className="row row-cols-md-5 g-3">
-              <div className="col">
-                {" "}
-                <div className="city-card">
-                  <img
-                    src="/cities/brampton.jpg"
-                    alt="New York"
-                    className="img-fluid city-card"
-                  />
-                  <div className="city-card-content">
-                    <small>50 Properties</small>
-                    <h5>Brampton</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                {" "}
-                <div className="city-card">
-                  <img
-                    src="/cities/calgary.jpeg"
-                    alt="Chicago"
-                    className="img-fluid city-card"
-                  />
-                  <div className="city-card-content">
-                    <small>50 Properties</small>
-                    <h5>Calgary</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                {" "}
-                <div className="city-card">
-                  <img
-                    src="/cities/etobicoke.jpg"
-                    alt="Los Angeles"
-                    className="img-fluid city-card"
-                  />
-                  <div className="city-card-content">
-                    <small>50 Property</small>
-                    <h5>Etobicoke</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                {" "}
-                <div className="city-card">
-                  <img
-                    src="/cities/mississauga.jpg"
-                    alt="San Diego"
-                    className="img-fluid city-card"
-                  />
-                  <div className="city-card-content">
-                    <small>50 Properties</small>
-                    <h5>Mississauga</h5>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col">
-                {" "}
-                <div className="city-card">
-                  <img
-                    src="/cities/toronto.jpg"
-                    alt="Florida"
-                    className="img-fluid city-card"
-                  />
-                  <div className="city-card-content">
-                    <small>50 Properties</small>
-                    <h5>Toronto</h5>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+
           <div className="py-5 my-2"></div>
           <div className="py-3 my-2"></div>
 
           <div className="d-flex mb-lg-5 mb-2">
-            <p className="text-4xl fw-bold mb-0 ">
-              Explore 50+ pre construction homes for sale in Mississauga
+            <p className="text-xl md:text-4xl fw-bold mb-0 ">
+              Explore 20+ pre construction homes for sale in Mississauga
             </p>
             <Link
               href={"/mississauga"}
-              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+              className="mt-1 fw-bold text-sm md:text-xl ml-auto pl-2 md:pl-0 text-orange-500"
             >
               Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
-          <div className="row row-cols-1 row-cols-md-4 gy-md-5 gy-3 gx-3">
+          <div className="row row-cols-2 row-cols-md-4 gy-md-5 gy-3 gx-3">
             {mississauga_data.preconstructions &&
               mississauga_data.preconstructions.slice(0, 8).map((item) => (
                 <div className="col" key={item.id}>
@@ -535,17 +442,17 @@ export default async function Home(props) {
           <div className="py-5 my-2"></div>
 
           <div className="d-flex mb-lg-5 mb-2">
-            <p className="text-4xl fw-bold mb-0 ">
-              Explore 30+ pre construction homes for sale in Edmonton
+            <p className="text-xl md:text-4xl fw-bold mb-0 ">
+              Explore 20+ pre construction homes for sale in Edmonton
             </p>
             <Link
-              href={"/edmonton"}
-              className="mt-1 fw-bold text-xl ml-auto text-orange-500"
+              href={"/Edmonton"}
+              className="mt-1 fw-bold text-sm md:text-xl ml-auto pl-2 md:pl-0 text-orange-500"
             >
               Explore All <i className="bi bi-arrow-right-short"></i>
             </Link>
           </div>
-          <div className="row row-cols-1 row-cols-md-4 gy-md-5 gy-3 gx-3">
+          <div className="row row-cols-2 row-cols-md-4 gy-md-5 gy-3 gx-3">
             {edmonton_data.preconstructions &&
               edmonton_data.preconstructions.slice(0, 8).map((item) => (
                 <div className="col" key={item.id}>
